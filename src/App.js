@@ -4,7 +4,7 @@ import Search from './components/Search'
 import Results from './components/Results'
 import CityMap from './components/CityMap'
 import numbeo from '../src/api/numbeo'
-import Graph from './components/Graph'
+
 
 
 class App extends Component {
@@ -28,8 +28,8 @@ constructor(props){
  
 
   componentDidMount = async () => {
-    // const response = await numbeo.get('cities')
-    // this.setState({citiesDB: response.data})  
+    const response = await numbeo.get('cities')
+    this.setState({citiesDB: response.data})  
 
 
   }
@@ -49,7 +49,7 @@ constructor(props){
             lat: latitude,
             cityName: cityName
           })
-          
+          console.log("HI: " + cityName)
           break;
       }
       
@@ -67,7 +67,6 @@ constructor(props){
         <div>
           <Search onSubmit={this.onSearchSubmit}/>
           <Results lon={this.state.lon} lat={this.state.lat} cityName={this.state.cityName}/>
-          <Graph />
         </div>
         
 

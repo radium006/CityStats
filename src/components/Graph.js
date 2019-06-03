@@ -7,20 +7,28 @@ var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 export default class Graph extends Component {	
     
+    constructor(props){
+      super(props)
+      
+    }
     
+
+    
+
     render() {
       const options = {
         title: {
-          text: "City Statistics for INSERT CITY"
+          text: `City Statistics for ${this.props.cityName}`
         },
         data: [{				
                   type: "column",
                   dataPoints: [
                       { label: "New York (Benchmark)",  y: 100  },
-                      { label: "Orange", y: 15  },
-                      { label: "New York", y: 150 },
-                      { label: "Mango",  y: 30  },
-                      { label: "Grape",  y: 28  }
+                      { label: "Quality Of Life Index", y: this.props.QualityOfLife},
+                      { label: "Cost of Living", y: this.props.CostOfLiving },
+                      { label: "Average Rent Index",  y: this.props.Rent  },
+                      { label: "Crime Rate Index",  y: this.props.Crime  },
+                      { label: "Healthcare Index",  y: this.props.HealthCare}
                       
                   ]
          }]
