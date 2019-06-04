@@ -14,6 +14,8 @@ constructor(props){
         CostOfLiving: null,
         Crime: null,
         HealthCare: null,
+        Pollution: null,
+        Traffic: null
         }
 }
     
@@ -28,7 +30,9 @@ constructor(props){
                     Rent: Math.round(response.data.rent_index),
                     CostOfLiving: Math.round(response.data.cpi_index),
                     Crime: Math.round(response.data.crime_index),
-                    HealthCare: Math.round(response.data.health_care_index)
+                    HealthCare: Math.round(response.data.health_care_index),
+                    Pollution: Math.round(response.data.pollution_index),
+                    Traffic: Math.round(response.data.traffic_index)
                 }) 
             })
             return true 
@@ -38,12 +42,26 @@ constructor(props){
 
     render(){
         
+
+        if(this.state.QualityOfLife == null){
         return(
             
-            <Graph cityName={this.props.cityName} QualityOfLife={this.state.QualityOfLife} Rent={this.state.Rent} CostOfLiving={this.state.CostOfLiving} Crime={this.state.Crime} HealthCare={this.state.HealthCare}/>
-            
+            <div>Enter a city</div>
         ) 
-       
+        }
+        else{
+            return(
+                <Graph 
+                cityName={this.props.cityName} 
+                QualityOfLife={this.state.QualityOfLife} 
+                Rent={this.state.Rent} 
+                CostOfLiving={this.state.CostOfLiving} 
+                Crime={this.state.Crime} 
+                HealthCare={this.state.HealthCare}
+                Traffic={this.state.Traffic}
+                Pollution={this.state.Pollution}/>
+            )
+        }
     }
 }
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Home from './components/Home'
 import Search from './components/Search'
 import Results from './components/Results'
+import Container from '@material-ui/core/Container'
 import CityMap from './components/CityMap'
 import numbeo from '../src/api/numbeo'
 
@@ -49,7 +50,6 @@ constructor(props){
             lat: latitude,
             cityName: cityName
           })
-          console.log("HI: " + cityName)
           break;
       }
       
@@ -64,12 +64,14 @@ constructor(props){
   render() {
     return (
       <div className="App" >
-        <div>
+        <Container>
+          <div>
+            <h2>CityStats</h2>
+            <p>Use the search bar below to retrive data regarding a city. For cities located in a state or province, follow the city name with the abbreviation of it's respective state (Houston, TX). Otherwise, just use sity name (Belgrade)</p>
+          </div>
           <Search onSubmit={this.onSearchSubmit}/>
           <Results lon={this.state.lon} lat={this.state.lat} cityName={this.state.cityName}/>
-        </div>
-        
-
+        </Container>
       </div>
     );
   }
