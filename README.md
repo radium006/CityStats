@@ -14,4 +14,8 @@
 </ul>
 
 <h2>Operation</h2>
-<p>This application requires an API key from Numbeo, a statistical API source. The API key used to develop this application is not included in this repository</p>
+<p>This application requires an API key from Numbeo, a statistical API source. The API key used to develop this application is not included in this repository
+
+<p>An Axios client file will need to be added. Below will be the exact format that the file should look like for correct operation</p>
+
+<p>INSERT AXIOS CLIENT</p>
