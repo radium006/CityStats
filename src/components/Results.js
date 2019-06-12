@@ -46,7 +46,9 @@ constructor(props){
         if(this.state.QualityOfLife == null){
         return(
             
-            <div>Enter a city</div>
+            <div className='container'>
+                <h1>Enter a city to begin</h1>
+            </div>
         ) 
         }
         else{

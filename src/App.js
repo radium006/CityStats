@@ -60,14 +60,13 @@ constructor(props){
 
   
 
-
   render() {
     return (
       <div className="App" >
         <Container>
           <div>
-            <h2>CityStats</h2>
-            <p>Use the search bar below to retrive data regarding a city. For cities located in a state or province, follow the city name with the abbreviation of it's respective state (Houston, TX). Otherwise, just use sity name (Belgrade)</p>
+            <h1 className='container'>CityStats</h1>
+            <p>Use the search bar below to retrive data regarding a city. For cities located in a state or province, follow the city name with the abbreviation of it's respective state (Houston, TX). Otherwise, just use city name (Belgrade)</p>
           </div>
           <Search onSubmit={this.onSearchSubmit}/>
           <Results lon={this.state.lon} lat={this.state.lat} cityName={this.state.cityName}/>
