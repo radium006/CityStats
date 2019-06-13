@@ -19,3 +19,6 @@
 <p>An Axios client file will need to be added. Below will be the exact format that the file should look like for correct operation</p>
 
 <p>INSERT AXIOS CLIENT</p>
+
+<h2>Interperet Results</h2>
+
