@@ -18,8 +18,8 @@
 
 <p>An Axios client file will need to be added. Below will be the exact format that the file should look like for correct operation</p>
 
-<p>INSERT AXIOS CLIENT</p>
+<p>Simply type the nae of the city into the search bar (including state or province abbreviations) and click the blue button to recieve results</p>
 
-<h2>Interperet Results</h2>
+<h2>Screenshot of App in action</h2>
 
 <a href="http://tinypic.com?ref=119rojl" target="_blank"><img src="http://i66.tinypic.com/119rojl.png" border="0" alt="Image and video hosting by TinyPic"></a>
