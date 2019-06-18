@@ -25,7 +25,6 @@ export default class Graph extends Component {
         data: [{				
                   type: "column",
                   dataPoints: [
-                      { label: "Quality Of Life Index", y: this.props.QualityOfLife},
                       { label: "Cost of Living", y: this.props.CostOfLiving },
                       { label: "Average Rent Index",  y: this.props.Rent  },
                       { label: "Crime Rate Index",  y: this.props.Crime  },

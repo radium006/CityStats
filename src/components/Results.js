@@ -53,15 +53,21 @@ constructor(props){
         }
         else{
             return(
+                <Container>
+                <div>
+                    <h2>Quality Of Life Index: {this.state.QualityOfLife}</h2>
+                </div>
+                <div>
                 <Graph 
                 cityName={this.props.cityName} 
-                QualityOfLife={this.state.QualityOfLife} 
                 Rent={this.state.Rent} 
                 CostOfLiving={this.state.CostOfLiving} 
                 Crime={this.state.Crime} 
                 HealthCare={this.state.HealthCare}
                 Traffic={this.state.Traffic}
                 Pollution={this.state.Pollution}/>
+                </div>
+                </Container>
             )
         }
     }
