@@ -70,6 +70,7 @@ constructor(props){
           </div>
           <Search onSubmit={this.onSearchSubmit}/>
           <Results lon={this.state.lon} lat={this.state.lat} cityName={this.state.cityName}/>
+          
         </Container>
       </div>
     );
